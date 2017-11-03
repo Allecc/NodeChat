@@ -1,0 +1,17 @@
+extends layout
+block content
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js")
+  script.
+    var socket = io();
+  .row
+    .col-md-3
+      span Twoja nazwa użytkownika:
+        input#nick.form-control
+  .row
+    .col-md-8.col-md-offset-2.well
+      ul
+        #messages
+        li
+          form(action='')
+            input#newMsg.col-md-8
+            button.btn.btn-success Wyślij
